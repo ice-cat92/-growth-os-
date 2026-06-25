@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ai: #10b981;
+  --color-ai-light: #34d399;
+  --color-ai-bg: rgba(16, 185, 129, 0.1);
+  --color-english: #3b82f6;
+  --color-english-light: #60a5fa;
+  --color-english-bg: rgba(59, 130, 246, 0.1);
+  --color-reading: #f59e0b;
+  --color-reading-light: #fbbf24;
+  --color-reading-bg: rgba(245, 158, 11, 0.1);
+}
+
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background: #0f172a;
+  color: #e2e8f0;
+}
+
+/* 自定义滚动条 */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #1e293b;
+}
+::-webkit-scrollbar-thumb {
+  background: #475569;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #64748b;
+}
+
+/* 环形进度条 */
+.ring-progress {
+  transform: rotate(-90deg);
+}
