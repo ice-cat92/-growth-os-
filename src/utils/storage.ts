@@ -1,6 +1,6 @@
 import type { AppState } from '@/types'
 
-const STORAGE_KEY = 'growth-os-state'
+const STORAGE_KEY = 'growth-os-state-v2'
 
 export function loadState(): AppState | null {
   try {

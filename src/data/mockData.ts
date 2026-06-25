@@ -491,101 +491,20 @@ export const mockLearningNodes: LearningNode[] = [
 ]
 
 // ===== 输出沉淀 =====
-export const mockOutputs: Output[] = [
-  {
-    id: 'output-1',
-    type: 'note',
-    title: 'LLM 基础概念笔记：Token、Embedding、Temperature',
-    content: '整理了 LLM 三个核心概念：1) Token 是 LLM 的计价单位... 2) Embedding 把文字变成向量... 3) Temperature 控制生成随机性...',
-    tags: ['LLM', '基础概念', '学习笔记'],
-    mainLine: 'ai',
-    learningNodeId: 'node-stage-1',
-    createdAt: yesterdayStr + 'T14:00:00.000Z',
-  },
-  {
-    id: 'output-2',
-    type: 'code',
-    title: '第一个 API 调用脚本：与 Claude API 对话',
-    content: '```python\nimport anthropic\n\nclient = anthropic.Anthropic()\n\nmessage = client.messages.create(\n    model="claude-sonnet-4-6",\n    max_tokens=1024,\n    messages=[{"role": "user", "content": "你好"}]\n)\nprint(message.content)\n```',
-    tags: ['Python', 'API', 'Claude'],
-    mainLine: 'ai',
-    taskId: 'task-yesterday-1',
-    learningNodeId: 'node-stage-1',
-    createdAt: yesterdayStr + 'T11:30:00.000Z',
-  },
-  {
-    id: 'output-3',
-    type: 'article',
-    title: 'System Prompt vs User Prompt：我的理解',
-    content: 'System Prompt 像是给 AI 设定的"身份"和"规则"... User Prompt 是我们真正要 AI 做的事... 两者需要配合：system prompt 定边界，user prompt 说具体...',
-    tags: ['Prompt', 'System Prompt', '学习笔记'],
-    mainLine: 'ai',
-    learningNodeId: 'node-stage-2',
-    createdAt: todayStr + 'T10:30:00.000Z',
-  },
-  {
-    id: 'output-4',
-    type: 'english_expression',
-    title: '英文学习笔记：Tool Use Documentation Vocabulary',
-    content: 'New words today:\n1. invoke (v.) - 调用\n2. schema (n.) - 模式/架构\n3. parameter (n.) - 参数\n\nExample: "The tool is invoked with a JSON schema that defines its parameters."',
-    tags: ['英语', '词汇', '技术文档'],
-    mainLine: 'english',
-    taskId: 'task-3',
-    createdAt: todayStr + 'T09:00:00.000Z',
-  },
-  {
-    id: 'output-5',
-    type: 'reading_card',
-    title: '读书卡片：《深度学习入门》第 2 章 — 感知机',
-    content: '感知机是神经网络的起源。核心思想：接收多个输入信号，加权求和，超过阈值则输出 1。局限：单层感知机无法解决 XOR 问题。解决：多层感知机通过叠加来拟合非线性边界。',
-    tags: ['深度学习', '感知机', '读书卡片'],
-    mainLine: 'reading',
-    createdAt: yesterdayStr + 'T14:00:00.000Z',
-  },
-  {
-    id: 'output-6',
-    type: 'review',
-    title: '每日复盘：2026-06-24',
-    content: '今天完成了 LLM 基础的 Stage 1，正式进入 Stage 2。最大的收获是理解了 Token 不是简单的"一个字"，而是一个 subword 单元... 明天继续 Stage 2 的 prompt few-shot 练习。',
-    tags: ['复盘', '每日复盘'],
-    mainLine: 'ai',
-    createdAt: yesterdayStr + 'T20:30:00.000Z',
-  },
-]
+export const mockOutputs: Output[] = []
 
 // ===== 每日复盘 =====
-export const mockDailyReviews: DailyReview[] = [
-  {
-    date: yesterdayStr,
-    q1_completed: '完成 Stage 1 LLM 基础学习、开始 Stage 2 Prompt Engineering 入门、完成了第一个 API 调用脚本',
-    q2_biggest_output: '写了一个能正常运行的 Claude API 调用脚本，这是从零到一的突破',
-    q3_underestimated: 'Stage 2 的 CoT（思维链）概念比预想更难理解，需要找更多例子来辅助理解',
-    q4_blocker: '对 API 的错误处理不够熟悉，遇到了一次 rate limit 报错不知道怎么处理',
-    q5_tomorrow_priority: '完成 Stage 2 的 few-shot prompt 动手练习，把 starter.py 跑通',
-  },
-]
+export const mockDailyReviews: DailyReview[] = []
 
 // ===== 周复盘 =====
-export const mockWeeklyReviews: WeeklyReview[] = [
-  {
-    weekStart: '2026-06-22',
-    notes: '本周完成了 Stage 0 基础准备（Python/git/API 复习）和 Stage 1 LLM 基础。英语方面坚持了每天晨读，累计积累了 40+ 新词汇。读书完成了《深度学习入门》前 2 章。',
-    nextWeekPlan: '下周完成 Stage 2 Prompt 设计全部内容，开始接触 Stage 3 Tool Use。英语保持节奏不变。读书继续第 3 章。',
-  },
-]
+export const mockWeeklyReviews: WeeklyReview[] = []
 
 // ===== 月复盘 =====
-export const mockMonthlyReviews: MonthlyReview[] = [
-  {
-    month: '2026-06',
-    notes: '6 月是从零开始系统学习 AI 的第一个月，完成了 Stage 0-1，正式进入 Stage 2。建立了每日学习的节奏感：上午 AI、下午读书输出、晚上英语和复盘。总体进展符合预期。',
-    nextMonthPlan: '7 月的目标是完成 Stage 2-4（Prompt 设计 + 工具调用 + Agent 框架），争取在 7 月底写出第一个能用的 Agent。英语要开始尝试读英文原版技术博客全文。读书完成 2-3 本。',
-  },
-]
+export const mockMonthlyReviews: MonthlyReview[] = []
 
 // ===== 组装完整初始状态 =====
 export function getInitialState(): AppState {
-  const stored = localStorage.getItem('growth-os-state')
+  const stored = localStorage.getItem('growth-os-state-v2')
   if (stored) {
     try {
       return JSON.parse(stored)
